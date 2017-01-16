@@ -2,46 +2,94 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item android:title="Категории">
+                <item
+                    android:id="@+id/nav_songs"
+                    android:icon="@drawable/ic_menu_music"
+                    android:title="@string/menu.songs.left"
+                    android:checkable="true" />
+                <item
+                    android:id="@+id/nav_lessons"
+                    android:icon="@drawable/ic_menu_lessons"
+                    android:title="@string/menu.lessons.left"
+                    android:checkable="true" />
+        <item android:title="@string/menu.games.left">
             <menu>
                 <item
-                    android:id="@+id/nav_camera"
-                    android:icon="@drawable/ic_menu_camera"
-                    android:title="Песни" />
+                    android:id="@+id/nav_games1"
+                    android:title="@string/menu.games1.left"
+                    android:checkable="true" />
                 <item
-                    android:id="@+id/nav_gallery"
-                    android:icon="@drawable/ic_menu_gallery"
-                    android:title="Игры" />
+                    android:id="@+id/nav_games2"
+                    android:title="@string/menu.games2.left"
+                    android:checkable="true" />
                 <item
-                    android:id="@+id/nav_slideshow"
-                    android:icon="@drawable/ic_menu_slideshow"
-                    android:title="Учебы" />
+                    android:id="@+id/nav_games3"
+                    android:title="@string/menu.games3.left"
+                    android:checkable="true" />
                 <item
-                    android:id="@+id/nav_manage"
-                    android:icon="@drawable/ic_menu_manage"
-                    android:title="Настройки" />
+                    android:id="@+id/nav_games4"
+                    android:title="@string/menu.games4.left"
+                    android:checkable="true" />
+                <item
+                    android:id="@+id/nav_games5"
+                    android:title="@string/menu.games5.left"
+                    android:checkable="true" />
+                <item
+                    android:id="@+id/nav_games6"
+                    android:title="@string/menu.games6.left"
+                    android:checkable="true" />
+                <item
+                    android:id="@+id/nav_games7"
+                    android:title="@string/menu.games7.left"
+                    android:checkable="true" />
+                <item
+                    android:id="@+id/nav_games8"
+                    android:title="@string/menu.games8.left"
+                    android:checkable="true" />
+                <item
+                    android:id="@+id/nav_games9"
+                    android:title="@string/menu.games9.left"
+                    android:checkable="true" />
+                <item
+                    android:id="@+id/nav_games10"
+                    android:title="@string/menu.games10.left"
+                    android:checkable="true" />
             </menu>
         </item>
+
+
     </group>
 
-    <item android:title="Коммуникация">
+    <item android:title="@string/menu.vk.left">
+        <menu>
+            <item
+                android:id="@+id/nav_login_vk"
+                android:icon="@drawable/ic_menu_vk"
+                android:title="@string/menu.enter.left" />
+        </menu>
+    </item>
+    <item android:title="@string/menu.communications.left">
         <menu>
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Отправить" />
+                android:title="@string/menu.share.left" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Написать" />
+                android:title="@string/menu.send.left" />
         </menu>
     </item>
-    <item android:title="Дополнительно">
+    <item android:title="@string/menu.addition.left">
         <menu>
             <item
+                android:id="@+id/nav_manage"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/menu.settings.left" />
+            <item
                 android:id="@+id/nav_update"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Обновить" />
+                android:icon="@drawable/ic_menu_update"
+                android:title="@string/menu.update.left" />
         </menu>
     </item>
 

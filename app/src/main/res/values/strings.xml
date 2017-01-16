@@ -1,8 +1,37 @@
 <resources>
-    <string name="app_name">SYL</string>
+    <string name="app_name">ШМЛ</string>
+    <integer name="com_vk_sdk_AppId">5825452</integer>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Привет!</string>
+    <string name="navigation_drawer_close">Пока!</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Настройки</string>
+    <string name="menu.categories.left">Категории</string>
+    <string name="menu.songs.left">Песни</string>
+    <string name="menu.games.left">Игры</string>
+    <string name="menu.lessons.left">Учебы</string>
+    <string name="menu.settings.left">Настройки</string>
+    <string name="menu.communications.left">Коммуникация</string>
+    <string name="menu.share.left">Отправить</string>
+    <string name="menu.send.left">Написать</string>
+    <string name="menu.addition.left">Дополнительно</string>
+    <string name="menu.update.left">Обновить</string>
+    <string name="menu.enter.left">Войти</string>
+    <string name="menu.vk.left">Вконтакте</string>
+    <string name="games">Игры</string>
+    <string name="lessons">Учебы</string>
+    <string name="songs">Песни</string>
+    <string name="empty">Пусто</string>
+
+    <string name="menu.games1.left">На знакомство</string>
+    <string name="menu.games2.left">На сплочение</string>
+    <string name="menu.games3.left">Одноразовые</string>
+    <string name="menu.games4.left">На выявление лидера</string>
+    <string name="menu.games5.left">Подвижные</string>
+    <string name="menu.games6.left">Игры-минутки</string>
+    <string name="menu.games7.left">С залом</string>
+    <string name="menu.games8.left">В автобусе</string>
+    <string name="menu.games9.left">В помещении</string>
+    <string name="menu.games10.left">Аттракционы</string>
+    <string name="author_email">deniz8011@gmail.com</string>
 </resources>
