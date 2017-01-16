@@ -13,13 +13,27 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.github.javiersantos.appupdater.AppUpdater;
+import com.github.javiersantos.appupdater.enums.UpdateFrom;
+
 public class Main extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        AppUpdater appUpdater = new AppUpdater(this);
+        appUpdater.start();
+        new AppUpdater(this)
+                .setUpdateFrom(UpdateFrom.XML)
+                .setUpdateXML("https://raw.githubusercontent.com/DenizKose/SYL/master/update/update.xml")
+                .start();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -91,6 +105,20 @@ public class Main extends AppCompatActivity
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
+            AppUpdater appUpdater = new AppUpdater(this);
+            appUpdater.start();
+            new AppUpdater(this)
+                    .setUpdateFrom(UpdateFrom.XML)
+                    .setUpdateXML("https://raw.githubusercontent.com/DenizKose/SYL/master/update/update.xml")
+                    .start();
+
+        } else if (id == R.id.nav_update) {
+            AppUpdater appUpdater = new AppUpdater(this);
+            appUpdater.start();
+            new AppUpdater(this)
+                    .setUpdateFrom(UpdateFrom.XML)
+                    .setUpdateXML("https://raw.githubusercontent.com/DenizKose/SYL/master/update/update.xml")
+                    .start();
 
         }
 
