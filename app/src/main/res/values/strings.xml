@@ -33,5 +33,17 @@
     <string name="menu.games8.left">В автобусе</string>
     <string name="menu.games9.left">В помещении</string>
     <string name="menu.games10.left">Аттракционы</string>
+
+    <string name="games1">Игра на знакомство</string>
+    <string name="games2">Игра на сплочение</string>
+    <string name="games3">Одноразовая игра</string>
+    <string name="games4">Игра на выявление лидера</string>
+    <string name="games5">Подвижная игра</string>
+    <string name="games6">Игра-минутка</string>
+    <string name="games7">Игра с залом</string>
+    <string name="games8">Игра в автобусе</string>
+    <string name="games9">Игра в помещении</string>
+    <string name="games10">Игра аттракцион</string>
+    
     <string name="author_email">deniz8011@gmail.com</string>
 </resources>

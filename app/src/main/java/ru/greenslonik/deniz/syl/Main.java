@@ -14,13 +14,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.github.javiersantos.appupdater.AppUpdater;
 import com.github.javiersantos.appupdater.enums.UpdateFrom;
+import com.vk.sdk.VKAccessToken;
+import com.vk.sdk.VKCallback;
 import com.vk.sdk.VKScope;
 import com.vk.sdk.VKSdk;
+import com.vk.sdk.api.VKApiConst;
+import com.vk.sdk.api.VKError;
+import com.vk.sdk.api.VKParameters;
+import com.vk.sdk.api.VKRequest;
+import com.vk.sdk.api.VKResponse;
+import com.vk.sdk.api.methods.VKApiGroups;
+import com.vk.sdk.api.methods.VKApiWall;
+import com.vk.sdk.api.model.VKList;
 
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import ru.greenslonik.deniz.syl.fragments.Games1;
 import ru.greenslonik.deniz.syl.fragments.Games10;
@@ -60,7 +74,7 @@ public class Main extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        //ListView news_feed = (ListView) findViewById(R.id.news_feed);
+       // ListView news_feed = (ListView) findViewById(R.id.news_feed);
 
         VKSdk.initialize(getApplicationContext());
 
@@ -81,7 +95,7 @@ public class Main extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Сасай :)", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Вы используете бета версию приложения. Данная версия только для тестеров. Распространение без разрешения запрещено!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
             }
@@ -112,49 +126,7 @@ public class Main extends AppCompatActivity
         frlessons  = new Lessons();
     }
 
-    //TODO: VK WALL
-   /* @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (!VKSdk.onActivityResult(requestCode, resultCode, data, new VKCallback<VKAccessToken>() {
-            @Override
-            public void onResult(VKAccessToken res) {
-                VKRequest vkRequest = new VKApiGroups().getById(VKParameters.from("group_ids","sinegoria"));
-                vkRequest.executeWithListener(new VKRequest.VKRequestListener() {
-                    @Override
-                    public void onComplete(VKResponse response) {
-                        super.onComplete(response);
-                        VKList  vkList = (VKList) response.parsedModel;
 
-                        VKRequest vkRequest1 = null;
-                        try {
-                            vkRequest1 = new VKApiWall()
-                                    .get(VKParameters.from(VKApiConst.OWNER_ID, "-"+vkList.get(0).fields.getInt("id"),  VKApiConst.COUNT, 100 ));
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                        vkRequest1.executeWithListener(new VKRequest.VKRequestListener() {
-                            @Override
-                            public void onComplete(VKResponse response) {
-                                super.onComplete(response);
-                                System.out.print(response.responseString);
-                            }
-                        });
-
-                    }
-                });
-
-                // Пользователь успешно авторизовался
-                Toast.makeText(getApplicationContext(),"Вы авторизованы!",Toast.LENGTH_LONG).show();
-            }
-            @Override
-            public void onError(VKError error) {
-                // Произошла ошибка авторизации (например, пользователь запретил авторизацию)
-                Toast.makeText(getApplicationContext(),"Упс, не получилось :(",Toast.LENGTH_LONG).show();
-            }
-        })) {
-            super.onActivityResult(requestCode, resultCode, data);
-        }
-    }*/
 
     @Override
     public void onBackPressed() {
@@ -182,6 +154,7 @@ public class Main extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Toast.makeText(getApplicationContext(),"Ну и чего ты добился?",Toast.LENGTH_SHORT).show();
             return true;
         }
 
@@ -241,22 +214,18 @@ public class Main extends AppCompatActivity
             ftrans.replace(R.id.container, frgames10);
 
         } else if (id == R.id.nav_lessons) {
-
-            ftrans.replace(R.id.container, frlessons);
+            Toast.makeText(getApplicationContext(),"Потерпи дружок ;)",Toast.LENGTH_SHORT).show();
+           // ftrans.replace(R.id.container, frlessons);
 
         } else if (id == R.id.nav_manage) {
 
-            Toast.makeText(getApplicationContext(),"Нечего насроить :)",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"Нечего настроить :)",Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_send) {
-            AppUpdater appUpdater = new AppUpdater(this);
-            appUpdater.start();
-            new AppUpdater(this)
-                    .setUpdateFrom(UpdateFrom.XML)
-                    .setUpdateXML("https://raw.githubusercontent.com/DenizKose/SYL/master/update/update.xml")
-                    .start();
+            Toast.makeText(getApplicationContext(),"Написалось :)",Toast.LENGTH_SHORT).show();
 
         }  else if (id == R.id.nav_share) {
+            Toast.makeText(getApplicationContext(),"Отправилось :)",Toast.LENGTH_SHORT).show();
 
         }  else if (id == R.id.nav_update) {
             AppUpdater appUpdater = new AppUpdater(this);
@@ -266,9 +235,11 @@ public class Main extends AppCompatActivity
                     .setUpdateXML("https://raw.githubusercontent.com/DenizKose/SYL/master/update/update.xml")
                     .start();
 
+            Toast.makeText(getApplicationContext(),"Ищу обновления...",Toast.LENGTH_SHORT).show();
+
         }  else if (id == R.id.nav_login_vk) {
-            //VKSdk.login(this, scope);
-            Toast.makeText(getApplicationContext(),"Скоро",Toast.LENGTH_SHORT).show();
+           // VKSdk.login(this, scope);
+            Toast.makeText(getApplicationContext(),"Ахахаха, не сейчас :D",Toast.LENGTH_SHORT).show();
         } ftrans.commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

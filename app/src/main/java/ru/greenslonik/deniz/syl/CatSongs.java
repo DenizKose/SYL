@@ -12,13 +12,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class CatSongs extends AppCompatActivity {
+public class CatSongs extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-
         WebView webView = (WebView) findViewById(R.id.webView);
 
         Intent intent = getIntent();
@@ -32,6 +31,8 @@ public class CatSongs extends AppCompatActivity {
 
     }
 
+
+
     public static String readRawTextFile(Context context, int resId){
         InputStream inputStream = context.getResources().openRawResource(resId);
         InputStreamReader inputReader = new InputStreamReader(inputStream);
@@ -42,11 +43,13 @@ public class CatSongs extends AppCompatActivity {
         try {
             while ((line = buffReader.readLine()) != null) {
                 builder.append(line);
-                builder.append("\n");
+                builder.append("<br>");
             }
         } catch (IOException e){
             return null;
         }
         return builder.toString();
     }
+
+
 }

@@ -42,7 +42,7 @@ public class CatGames3 extends AppCompatActivity {
         try {
             while ((line = buffReader.readLine()) != null) {
                 builder.append(line);
-                builder.append("\n");
+                builder.append("<br>");
             }
         } catch (IOException e){
             return null;

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.webkit.WebView;
 
 import java.io.BufferedReader;
@@ -32,6 +33,8 @@ public class CatGames1 extends AppCompatActivity {
 
     }
 
+
+
     public static String readRawTextFile(Context context, int resId){
         InputStream inputStream = context.getResources().openRawResource(resId);
         InputStreamReader inputReader = new InputStreamReader(inputStream);
@@ -42,7 +45,7 @@ public class CatGames1 extends AppCompatActivity {
         try {
             while ((line = buffReader.readLine()) != null) {
                 builder.append(line);
-                builder.append("\n");
+                builder.append("<br>");
             }
         } catch (IOException e){
             return null;

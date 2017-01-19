@@ -60,12 +60,12 @@
 
     </group>
 
-    <item android:title="@string/menu.vk.left">
+    <item android:title="@string/menu.vk.left" android:visible="false">
         <menu>
             <item
                 android:id="@+id/nav_login_vk"
                 android:icon="@drawable/ic_menu_vk"
-                android:title="@string/menu.enter.left" />
+                android:title="@string/menu.enter.left"/>
         </menu>
     </item>
     <item android:title="@string/menu.communications.left">
