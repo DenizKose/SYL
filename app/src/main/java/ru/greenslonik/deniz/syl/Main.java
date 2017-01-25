@@ -1,10 +1,16 @@
 package ru.greenslonik.deniz.syl;
 
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,9 +18,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.javiersantos.appupdater.AppUpdater;
@@ -36,6 +41,11 @@ import com.vk.sdk.api.model.VKList;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import ru.greenslonik.deniz.syl.fragments.About;
 import ru.greenslonik.deniz.syl.fragments.Games1;
 import ru.greenslonik.deniz.syl.fragments.Games10;
 import ru.greenslonik.deniz.syl.fragments.Games2;
@@ -47,6 +57,7 @@ import ru.greenslonik.deniz.syl.fragments.Games7;
 import ru.greenslonik.deniz.syl.fragments.Games8;
 import ru.greenslonik.deniz.syl.fragments.Games9;
 import ru.greenslonik.deniz.syl.fragments.Lessons;
+import ru.greenslonik.deniz.syl.fragments.MainScreen;
 import ru.greenslonik.deniz.syl.fragments.Songs;
 
 public class Main extends AppCompatActivity
@@ -64,6 +75,8 @@ public class Main extends AppCompatActivity
     Games10 frgames10;
     Songs frsongs;
     Lessons frlessons;
+    About frabout;
+    MainScreen frmainscreen;
 
 
     private String[] scope = new String[] {VKScope.FRIENDS,VKScope.STATUS};
@@ -73,6 +86,14 @@ public class Main extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        final View view = findViewById(R.id.snack_view);
+        Snackbar.make(view,R.string.help_text,Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Кнопка тут >",Toast.LENGTH_SHORT).show();
+            }
+        }).show();
 
        // ListView news_feed = (ListView) findViewById(R.id.news_feed);
 
@@ -91,17 +112,8 @@ public class Main extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Вы используете бета версию приложения. Данная версия только для тестеров. Распространение без разрешения запрещено!", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
 
-            }
-        });
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -109,7 +121,15 @@ public class Main extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawer.openDrawer(Gravity.LEFT);
 
+
+            }
+        });
 
 
         frgames1  = new Games1();
@@ -124,8 +144,34 @@ public class Main extends AppCompatActivity
         frgames10  = new Games10();
         frsongs  = new Songs();
         frlessons  = new Lessons();
+        frabout = new About();
+        frmainscreen = new MainScreen();
+
+        FragmentTransaction ftrans = getFragmentManager().beginTransaction();
+        ftrans.replace(R.id.container, frmainscreen);
+        ftrans.commit();
     }
 
+    protected void sendEmail() {
+
+        String[] TO = {"deniz8011@gmail.com"};
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        emailIntent.setData(Uri.parse("mailto:"));
+        emailIntent.setType("message/rfc822");
+
+
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "");
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Отправить Email"));
+            finish();
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(Main.this,
+                    "Не установлено ни одного почтового клиента", Toast.LENGTH_SHORT).show();
+        }
+    }
 
 
     @Override
@@ -138,28 +184,6 @@ public class Main extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Toast.makeText(getApplicationContext(),"Ну и чего ты добился?",Toast.LENGTH_SHORT).show();
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -221,11 +245,17 @@ public class Main extends AppCompatActivity
 
             Toast.makeText(getApplicationContext(),"Нечего настроить :)",Toast.LENGTH_SHORT).show();
 
-        } else if (id == R.id.nav_send) {
-            Toast.makeText(getApplicationContext(),"Написалось :)",Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_about) {
 
-        }  else if (id == R.id.nav_share) {
-            Toast.makeText(getApplicationContext(),"Отправилось :)",Toast.LENGTH_SHORT).show();
+            ftrans.replace(R.id.container, frabout);
+
+        } else if (id == R.id.nav_group_vk) {
+            Uri vk = Uri.parse("https://vk.com/sinegoria");
+            Intent intent = new Intent(Intent.ACTION_VIEW, vk);
+            startActivity(intent);
+
+        } else if (id == R.id.nav_send) {
+            sendEmail();
 
         }  else if (id == R.id.nav_update) {
             AppUpdater appUpdater = new AppUpdater(this);
@@ -246,4 +276,5 @@ public class Main extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }
