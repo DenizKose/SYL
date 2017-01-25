@@ -11,48 +11,60 @@
                     android:id="@+id/nav_lessons"
                     android:icon="@drawable/ic_menu_lessons"
                     android:title="@string/menu.lessons.left"
-                    android:checkable="true" />
-        <item android:title="@string/menu.games.left">
+                    android:checkable="true"
+                    android:visible="false" />
+        <item android:title="@string/menu.games.left"
+            android:checkable="false">
             <menu>
                 <item
                     android:id="@+id/nav_games1"
                     android:title="@string/menu.games1.left"
+                    android:icon="@drawable/ic_menu_handshake"
                     android:checkable="true" />
                 <item
                     android:id="@+id/nav_games2"
                     android:title="@string/menu.games2.left"
+                    android:icon="@drawable/ic_menu_group"
                     android:checkable="true" />
                 <item
                     android:id="@+id/nav_games3"
                     android:title="@string/menu.games3.left"
+                    android:icon="@drawable/ic_menu_one"
                     android:checkable="true" />
                 <item
                     android:id="@+id/nav_games4"
                     android:title="@string/menu.games4.left"
+                    android:icon="@drawable/ic_menu_crown"
                     android:checkable="true" />
                 <item
                     android:id="@+id/nav_games5"
                     android:title="@string/menu.games5.left"
+                    android:icon="@drawable/ic_menu_movement"
                     android:checkable="true" />
                 <item
                     android:id="@+id/nav_games6"
                     android:title="@string/menu.games6.left"
+                    android:icon="@drawable/ic_menu_time"
                     android:checkable="true" />
                 <item
                     android:id="@+id/nav_games7"
                     android:title="@string/menu.games7.left"
+                    android:icon="@drawable/ic_menu_mic"
                     android:checkable="true" />
                 <item
                     android:id="@+id/nav_games8"
                     android:title="@string/menu.games8.left"
+                    android:icon="@drawable/ic_menu_bus"
                     android:checkable="true" />
                 <item
                     android:id="@+id/nav_games9"
                     android:title="@string/menu.games9.left"
+                    android:icon="@drawable/ic_menu_hall"
                     android:checkable="true" />
                 <item
                     android:id="@+id/nav_games10"
                     android:title="@string/menu.games10.left"
+                    android:icon="@drawable/ic_menu_attraction"
                     android:checkable="true" />
             </menu>
         </item>
@@ -71,9 +83,9 @@
     <item android:title="@string/menu.communications.left">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/menu.share.left" />
+                android:id="@+id/nav_group_vk"
+                android:icon="@drawable/ic_menu_group_vk"
+                android:title="@string/menu.groupvk.left" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
@@ -86,6 +98,11 @@
                 android:id="@+id/nav_manage"
                 android:icon="@drawable/ic_menu_manage"
                 android:title="@string/menu.settings.left" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_menu_about"
+                android:checkable="true"
+                android:title="@string/menu.about.left" />
             <item
                 android:id="@+id/nav_update"
                 android:icon="@drawable/ic_menu_update"

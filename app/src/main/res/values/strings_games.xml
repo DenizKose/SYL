@@ -1,0 +1,195 @@
+<resources>
+
+    <string name="gamesadd">К списку игр</string>
+    <string-array name="games_cat">
+        <item>Игры на знакомство</item>
+        <item>Игры на сплочение</item>
+        <item>Одноразовые игры</item>
+        <item>Игры на выявление лидера</item>
+        <item>Подвижные игры</item>
+        <item>Игры минутки</item>
+        <item>Игры с залом</item>
+        <item>Игры в автобусе</item>
+        <item>Игры в помещении</item>
+        <item>Игры аттракционы</item>
+    </string-array>
+
+    <string-array name="games_cat1">
+        <item>01. Снежный ком</item>
+        <item>02. Мы идём в поход</item>
+        <item>03. Тормоз</item>
+        <item>04. Муха на</item>
+        <item>05. Стрелочки</item>
+        <item>06. Дразнилки</item>
+        <item>07. Я змея</item>
+        <item>08. А - я еду, а я рядом, а я зайцем</item>
+        <item>09. Математика</item>
+        <item>10. Раз, два, три </item>
+        <item>11. Признание в любви</item>
+        <item>12. 5 важных вещей</item>
+        <item>13. Чей голосок </item>
+        <item>14. Японцы</item>
+        <item>15. Покрывало</item>
+        <item>16. Клубочек</item>
+        <item>17. Расскажи о себе</item>
+        <item>18. Похвальба</item>
+        <item>19. Ловись, имя </item>
+        <item>20. Имена в шеренге</item>
+        <item>21. Животные на спину</item>
+        <item>22. Слоги</item>
+        <item>23. Правда и ложь</item>
+        <item>24. Я люблю делать</item>
+        <item>25. Стульчики</item>
+        <item>26. У кого поменяйтесь</item>
+        <item>27. Дрозд</item>
+        <item>28. Я умею, могу научить, хочу научиться</item>
+        <item>29. Кто умеет</item>
+        <item>30. В трех словах</item>
+        <item>31. Стулья</item>
+        <item>32. Загадка о себе</item>
+        <item>33. Откроем сердце друг другу</item>
+        <item>34. Водяной</item>
+        <item>35. Цып-цап</item>
+        <item>36. Мяч по кругу</item>
+        <item>37. Двойной круг</item>
+        <item>38. 10 свойств</item>
+        <item>39. Поздороваться за руку с максимальным количеством людей</item>
+        <item>40. Представить своего правого соседа</item>
+        <item>41. Зоопарк</item>
+        <item>42. Математика</item>
+        <item>43. Перепись</item>
+    </string-array>
+
+    <string-array name="games_cat2">
+        <item>01. Ищи и найди</item>
+        <item>02. Колдуны</item>
+        <item>03. Путанка-животное</item>
+        <item>04. Узелки</item>
+        <item>05. Электрическая цепь</item>
+        <item>06. Джойстик</item>
+        <item>07. Горящая земля</item>
+        <item>08. Квадрат</item>
+        <item>09. Завяжи узел</item>
+        <item>10. Комплименты</item>
+        <item>11. Колокол</item>
+        <item>12. Счёт до 10</item>
+        <item>13. Сесть на 1 стул</item>
+        <item>14. Носок-пятка</item>
+        <item>15. Орлятский круг</item>
+        <item>16. Кетчуп-сосиска-кока-кола</item>
+    </string-array>
+
+    <string-array name="games_cat3">
+        <item>01. Поцелуй игрушку</item>
+        <item>02. Экстрасенс</item>
+        <item>03. Да-нет-да</item>
+        <item>04. В моих маленьких штанишках</item>
+        <item>05. Я люблю тебя и не улыбаюсь</item>
+        <item>06. Семейка Адамс</item>
+        <item>07. История любви</item>
+        <item>08. Лампочка</item>
+        <item>09. Стена</item>
+        <item>10. МПС</item>
+        <item>11. Статуя любви</item>
+        <item>12. Я вижу мишку</item>
+        <item>13. Невероятная история</item>
+        <item>14. Гаражики</item>
+    </string-array>
+
+    <string-array name="games_cat4">
+        <item>01. Семейная фотография </item>
+        <item>02. Построиться по признакам</item>
+        <item>03. Выкидывание пальцев.</item>
+        <item>04. Карабас</item>
+        <item>05. Индикатор</item>
+        <item>06. Делай раз, делай два</item>
+        <item>07. Полёт на Марс </item>
+    </string-array>
+
+    <string-array name="games_cat5">
+        <item>01. Красный, желтый, зеленый </item>
+        <item>02. Ткачиха</item>
+        <item>03. Хвост дракона</item>
+        <item>04. Светофор</item>
+        <item>05. Заяц без логова</item>
+        <item>06. Закалдованный замок</item>
+        <item>07. Вороны-Воробьи</item>
+        <item>08. Белки, шишки, орехи</item>
+        <item>09. Здравствуйте</item>
+        <item>10. Кот и мыши</item>
+        <item>11. Невод</item>
+        <item>12. Волки во рву</item>
+        <item>13. Два кольца</item>
+        <item>14. Лес, болото, озеро</item>
+    </string-array>
+
+    <string-array name="games_cat6">
+        <item>01. Громче-тише</item>
+        <item>02. Моргалки</item>
+        <item>03. Сантики - Фантики - Лимпомпо</item>
+        <item>04. Телеграмма (письмо)</item>
+        <item>05. Летел лебедь</item>
+        <item>06. Себе-соседу</item>
+        <item>07. Ирландская дуэль</item>
+        <item>08. Ветер дует на того</item>
+        <item>09. Опачки</item>
+        <item>10. Руки вверх</item>
+        <item>11. Отгадай, чей голосок</item>
+    </string-array>
+
+    <string-array name="games_cat7">
+        <item>01. Шар</item>
+        <item>02. Мы музыканты</item>
+        <item>03. Ипподром</item>
+        <item>04. Рыбка</item>
+        <item>05. Гол-мимо</item>
+        <item>06. На поле футбольном…</item>
+        <item>07. Орлятский дождик</item>
+        <item>08. Школа аплодисментов</item>
+    </string-array>
+
+    <string-array name="games_cat8">
+        <item>01. Шар</item>
+        <item>02. Игры с двумя сторонами автобуса</item>
+        <item>03. Игра-рассказ без прилагательных</item>
+        <item>04. Загадки</item>
+    </string-array>
+
+    <string-array name="games_cat9">
+        <item>01. Жовжелить</item>
+        <item>02. Аналогии</item>
+        <item>03. Найди ручку</item>
+        <item>04. Найди то, не зная что, сделай то, не зная что</item>
+        <item>05. Крепость</item>
+        <item>06. Карандашик</item>
+        <item>07. Банальности</item>
+    </string-array>
+
+    <string-array name="games_cat10">
+        <item>01. Сорви шапку</item>
+        <item>02. Что там, за спиной</item>
+        <item>03. Стаи рыбок</item>
+        <item>04. Мушка</item>
+        <item>05. Победи троих</item>
+        <item>06. Крючком за мяч</item>
+        <item>07. Рыболовы</item>
+        <item>08. Кто сильнее</item>
+        <item>09. Веселые поварята</item>
+        <item>10. На ощупь</item>
+        <item>11. Отдай честь!</item>
+        <item>12. Толкни "ядро"</item>
+        <item>13. Дунь в коробок</item>
+        <item>14. Ложку на ножку</item>
+        <item>15. Достань коробок</item>
+        <item>16. Сумей сделать</item>
+        <item>17. Пусть не каплет над головой</item>
+        <item>18. Бумажная стрела</item>
+        <item>19. Не сходя с ребра</item>
+        <item>20. С помощью стула</item>
+        <item>21. Через палку</item>
+        <item>22. Жонглер</item>
+        <item>23. Трудный прыжок</item>
+        <item>24. Необычный футболист</item>
+        <item>25. Собери грибы</item>
+    </string-array>
+</resources>

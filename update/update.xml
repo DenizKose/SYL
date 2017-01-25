@@ -1,8 +1,10 @@
 <update>
-    <latestVersion>1.1</latestVersion>
-    <url>https://github.com/DenizKose/SYL/raw/master/update/syl-v1.1.apk</url>
+    <latestVersion>1.2</latestVersion>
+    <url>https://github.com/DenizKose/SYL/raw/master/update/syl-v1.2.apk</url>
     <releaseNotes>
-        - Обновлена база песен и игр
-        - Исправлены мелкие ошибки
+- Обновлен раздел игр (Игры в автобусе)
+- Исправлена область нажатий в списках, теперь можно кликнуть на всю строку
+- Исправлена разметка игр и песен
+- Добавлена песня "Четыре таракана и сверчок"
     </releaseNotes>
 </update>

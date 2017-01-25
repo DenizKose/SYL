@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ШМЛ</string>
+    <string name="app_name">ШМЛ (beta)</string>
     <integer name="com_vk_sdk_AppId">5825452</integer>
 
     <string name="navigation_drawer_open">Привет!</string>
@@ -11,9 +11,10 @@
     <string name="menu.games.left">Игры</string>
     <string name="menu.lessons.left">Учебы</string>
     <string name="menu.settings.left">Настройки</string>
+    <string name="menu.about.left">О программе</string>
     <string name="menu.communications.left">Коммуникация</string>
-    <string name="menu.share.left">Отправить</string>
-    <string name="menu.send.left">Написать</string>
+    <string name="menu.groupvk.left">Группа ВК</string>
+    <string name="menu.send.left">Написать Email</string>
     <string name="menu.addition.left">Дополнительно</string>
     <string name="menu.update.left">Обновить</string>
     <string name="menu.enter.left">Войти</string>
@@ -46,4 +47,7 @@
     <string name="games10">Игра аттракцион</string>
     
     <string name="author_email">deniz8011@gmail.com</string>
+    <string name="help_text">Нажмите на круглую кнопку, чтобы открыть меню</string>
+
+
 </resources>

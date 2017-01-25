@@ -1,0 +1,13 @@
+<resources>
+    <string name="cat_games1">Игры на знакомство</string>
+    <string name="cat_games2">Игры на сплочение</string>
+    <string name="cat_games3">Одноразовые игры</string>
+    <string name="cat_games4">Игры на выявление лидера</string>
+    <string name="cat_games5">Подвижные игры</string>
+    <string name="cat_games6">Игры минутки</string>
+    <string name="cat_games7">Игры с залом</string>
+    <string name="cat_games8">Игры в автобусе</string>
+    <string name="cat_games9">Игры в помещении</string>
+    <string name="cat_games10">Игры аттракционы</string>
+
+</resources>

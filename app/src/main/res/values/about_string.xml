@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title">О программе</string>
+    <string name="about_desc">Программа создана для инструкторов и вожатых Школы Молодежных Лидеров в качестве карманного помощника по играм и песням.
+\n
+        \n<b>Автор:</b> Кёсе Дениз
+        \n<b>Email:</b> deniz8011@gmail.com
+\n
+        \n<b>Группа ШМЛ Вконтакте:</b> vk.com/sinegoria
+    </string>
+
+    <string name="changelog">Список изменений</string>
+    <string name="changelist1">
+        <b>Версия 1.0 alpha</b>
+        \n- Выпуск альфа версии
+    </string>
+    <string name="changelist2">
+        <b>Версия 1.1 beta</b>
+        \n- Обновлена база песен и игр
+        \n- Исправлены мелкие ошибки
+    </string>
+    <string name="changelist3">
+        <b>Версия 1.2 beta</b>
+        \n- Обновлен раздел игр (Игры в автобусе)
+        \n- Исправлена область нажатий в списках, теперь можно кликнуть на всю строку
+        \n- Исправлена разметка игр и песен
+        \n- Добавлена песня "Четыре таракана и сверчок"
+    </string>
+</resources>
