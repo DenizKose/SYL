@@ -1,5 +1,6 @@
 package ru.greenslonik.deniz.syl.fragments;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -25,7 +26,7 @@ public class MainScreen extends Fragment{
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-       View v = inflater.inflate(R.layout.mainscreen_layout,null);
+       @SuppressLint("InflateParams") View v = inflater.inflate(R.layout.mainscreen_layout,null);
 
         WebView wv_gif = (WebView) v.findViewById(R.id.wv_gif);
 

@@ -10,8 +10,7 @@
         android:icon="@drawable/ic_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name=".Vk">
+        android:theme="@style/AppTheme">
         <activity
             android:name=".Main"
             android:label="@string/app_name"
@@ -143,10 +142,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-
-
-        <activity android:name="com.vk.sdk.VKServiceActivity" android:label="ServiceActivity" android:theme="@style/VK.Transparent" />
-    </application>
+</application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package ru.greenslonik.deniz.syl.fragments;
 
 
+import android.annotation.SuppressLint;
 import android.app.ListFragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,7 +23,7 @@ public class Games5 extends ListFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.games_cat5));
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.games_cat5));
         setListAdapter(adapter);
     }
 
@@ -35,6 +36,7 @@ public class Games5 extends ListFragment {
         startActivity(intent);
     }
 
+    @SuppressLint("InflateParams")
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_style,null);
     }

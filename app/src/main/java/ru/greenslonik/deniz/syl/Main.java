@@ -1,16 +1,12 @@
 package ru.greenslonik.deniz.syl;
 
 import android.app.FragmentTransaction;
-import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,31 +15,10 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.javiersantos.appupdater.AppUpdater;
 import com.github.javiersantos.appupdater.enums.UpdateFrom;
-import com.vk.sdk.VKAccessToken;
-import com.vk.sdk.VKCallback;
-import com.vk.sdk.VKScope;
-import com.vk.sdk.VKSdk;
-import com.vk.sdk.api.VKApiConst;
-import com.vk.sdk.api.VKError;
-import com.vk.sdk.api.VKParameters;
-import com.vk.sdk.api.VKRequest;
-import com.vk.sdk.api.VKResponse;
-import com.vk.sdk.api.methods.VKApiGroups;
-import com.vk.sdk.api.methods.VKApiWall;
-import com.vk.sdk.api.model.VKList;
-
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
 import ru.greenslonik.deniz.syl.fragments.About;
 import ru.greenslonik.deniz.syl.fragments.Games1;
@@ -78,10 +53,6 @@ public class Main extends AppCompatActivity
     About frabout;
     MainScreen frmainscreen;
 
-
-    private String[] scope = new String[] {VKScope.FRIENDS,VKScope.STATUS};
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,13 +65,6 @@ public class Main extends AppCompatActivity
                 Toast.makeText(getApplicationContext(),"Кнопка тут >",Toast.LENGTH_SHORT).show();
             }
         }).show();
-
-       // ListView news_feed = (ListView) findViewById(R.id.news_feed);
-
-        VKSdk.initialize(getApplicationContext());
-
-
-
 
         AppUpdater appUpdater = new AppUpdater(this);
         appUpdater.start();
@@ -125,7 +89,7 @@ public class Main extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                drawer.openDrawer(Gravity.LEFT);
+                drawer.openDrawer(GravityCompat.START);
 
 
             }
@@ -151,6 +115,7 @@ public class Main extends AppCompatActivity
         ftrans.replace(R.id.container, frmainscreen);
         ftrans.commit();
     }
+
 
     protected void sendEmail() {
 
@@ -187,7 +152,7 @@ public class Main extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
@@ -267,9 +232,6 @@ public class Main extends AppCompatActivity
 
             Toast.makeText(getApplicationContext(),"Ищу обновления...",Toast.LENGTH_SHORT).show();
 
-        }  else if (id == R.id.nav_login_vk) {
-           // VKSdk.login(this, scope);
-            Toast.makeText(getApplicationContext(),"Ахахаха, не сейчас :D",Toast.LENGTH_SHORT).show();
         } ftrans.commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

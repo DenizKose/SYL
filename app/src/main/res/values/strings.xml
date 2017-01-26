@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">ШМЛ (beta)</string>
-    <integer name="com_vk_sdk_AppId">5825452</integer>
+    <string name="app_name">ШМЛ</string>
 
     <string name="navigation_drawer_open">Привет!</string>
     <string name="navigation_drawer_close">Пока!</string>
@@ -48,6 +47,7 @@
     
     <string name="author_email">deniz8011@gmail.com</string>
     <string name="help_text">Нажмите на круглую кнопку, чтобы открыть меню</string>
+    <string name="logo">Logo</string>
 
 
 </resources>

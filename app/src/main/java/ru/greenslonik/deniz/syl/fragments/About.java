@@ -1,5 +1,6 @@
 package ru.greenslonik.deniz.syl.fragments;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import ru.greenslonik.deniz.syl.R;
 
 
 public class About extends Fragment {
+    @SuppressLint("InflateParams")
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.about_layout,null);
     }
