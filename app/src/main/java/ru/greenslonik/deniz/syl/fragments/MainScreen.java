@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.TextView;
 
@@ -29,11 +30,17 @@ public class MainScreen extends Fragment{
        @SuppressLint("InflateParams") View v = inflater.inflate(R.layout.mainscreen_layout,null);
 
         WebView wv_gif = (WebView) v.findViewById(R.id.wv_gif);
+        wv_gif.getSettings().setAppCacheMaxSize(5*1024*1024);
+        wv_gif.getSettings().setAppCachePath("/cache/");
+        wv_gif.getSettings().setAllowFileAccess(true);
+        wv_gif.getSettings().setAppCacheEnabled(true);
+        wv_gif.getSettings().setJavaScriptEnabled(true);
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (CheckInternet.checkConnection(getContext())) {
                 wv_gif.loadUrl("https://m.vk.com/sinegoria?own=0#wall");
+
             } else {
                 wv_gif.loadUrl("file:///android_asset/warning.html");
             }
