@@ -1,8 +1,7 @@
 <update>
-    <latestVersion>1.3</latestVersion>
-    <url>https://github.com/DenizKose/SYL/raw/master/update/syl-v1.3.apk</url>
+    <latestVersion>1.4</latestVersion>
+    <url>https://github.com/DenizKose/SYL/raw/master/update/syl-v1.4.apk</url>
     <releaseNotes>
-- Оптимизация кода и приложения в целом
-- Релиз приложения
+- Изменение дизайна
     </releaseNotes>
 </update>
